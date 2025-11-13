@@ -23,4 +23,15 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  //TEST 1: below im testing if the headerText is working
+
+  it('Should render headerText in an h1 tag', () => {
+    component.headerText = 'Welcome!';
+  fixture.detectChanges();
+
+const compiled = fixture.nativeElement as HTMLElement;
+expect(compiled.querySelector('h1')?.textContent).toContain('Welcome!');
+});
+
 });
