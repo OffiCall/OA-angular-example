@@ -12,8 +12,7 @@ describe('HomeComponent', () => {
       /*schemas: [
         CUSTOM_ELEMENTS_SCHEMA
       ],*/
-    })
-      .compileComponents();
+    }).compileComponents();
 
     fixture = TestBed.createComponent(HomeComponent);
     component = fixture.componentInstance;
@@ -28,9 +27,9 @@ describe('HomeComponent', () => {
 
   it('Should render headerText in an h1 tag', () => {
     component.headerText = 'Welcome!';
-  fixture.detectChanges();
-  const compiled = fixture.nativeElement as HTMLElement;
-  expect(compiled.querySelector('h1')?.textContent).toContain('Welcome!');  
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('h1')?.textContent).toContain('Welcome!');
   });
 
   //TEST 2: testing if the button exists and has the right text
@@ -41,5 +40,4 @@ describe('HomeComponent', () => {
     expect(button).toBeTruthy();
     expect(button?.textContent).toContain('Feedback page');
   });
-
 });

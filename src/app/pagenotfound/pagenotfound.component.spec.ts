@@ -12,8 +12,7 @@ describe('PagenotfoundComponent', () => {
       /*schemas: [
         CUSTOM_ELEMENTS_SCHEMA
       ],*/
-    })
-      .compileComponents();
+    }).compileComponents();
 
     fixture = TestBed.createComponent(PagenotfoundComponent);
     component = fixture.componentInstance;
@@ -33,5 +32,4 @@ describe('PagenotfoundComponent', () => {
     expect(link?.getAttribute('href')).toBe('/home');
     expect(link?.textContent).toContain('Home page');
   });
-  
 });
