@@ -23,4 +23,15 @@ describe('PagenotfoundComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  //TEST 3: Testing the home links existance
+
+  it('Should render a link to the Home page', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    const link = compiled.querySelector('a');
+    expect(link).toBeTruthy();
+    expect(link?.getAttribute('href')).toBe('/home');
+    expect(link?.textContent).toContain('Home page');
+  });
+  
 });
