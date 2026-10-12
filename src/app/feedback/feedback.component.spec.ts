@@ -20,7 +20,7 @@ describe('FeedbackComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-
+  //TEST: testing if the component is created
   it('should create', () => {
     expect(component).toBeTruthy();
   });
